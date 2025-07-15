@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>مودهای جی تی ای و دانلود</title>
+<style>
+  body {
+    font-family: Tahoma, sans-serif;
+    background-color: #fff0f5;
+    color: rgb(34, 34, 34);
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f8f8f8;
+  }
+  #wrapper {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255,255,255,0.95);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transition: background 0.5s, color 0.5s;
+  }
+  body.dark-mode #wrapper {
+    background: rgba(40,40,40,0.95);
+  }
+
+  h1, h2 {
+    text-align: center;
+    background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textColorMove 5s infinite linear;
+    background-size: 400%;
+  }
+
+  .post {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #ffe4ec;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: rgb(45, 45, 45);
+    transition: background 0.5s, color 0.5s;
+    opacity: 0;
+    animation: fadeInPost 1s ease forwards;
+  }
+  body.dark-mode .post {
+    background: #2c2c2c;
+    color: #ddd;
+  }
+  .post p {
+    background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textColorMove 5s infinite linear;
+    background-size: 400%;
+
+    color: rgb(50, 50, 50);
+  }
+  a.download-link {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(270deg, #2196f3, #ff5722, #f44336);
+    background-size: 600% 600%;
+    animation: gradientBG 12s ease infinite;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 8px rgba(33, 150, 243, 0.7);
+  }
+  a.download-link:hover {
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.9), 0 0 40px rgba(244, 67, 54, 0.7);
+    animation: electricHover 0.5s infinite;
+  }
+
+  #toggleBtn, #modeToggle {
+    padding: 10px 20px;
+    background: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 20px auto;
+    display: block;
+    animation: pulseGlow 3s infinite;
+  }
+
+  #textBox {
+    display: block;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 20px auto 60px;
+    text-align: center;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% 500%;
+    animation: rgbTextBox 5s infinite alternate, neonFlicker 3s infinite;
+  }
+
+  .final-message img {
+    max-width: 100%;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .post h2 {
+    animation: subtleShake 2s infinite ease-in-out;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes textColorMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+
+  @keyframes rgbTextBox {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+
+  @keyframes flashText {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  @keyframes neonFlicker {
+    0%, 100% {
+      opacity: 1;
+      text-shadow: 0 0 5px #ff00c8, 0 0 10px #ff00c8, 0 0 20px #ff00c8;
+    }
+    50% {
+      opacity: 0.5;
+      text-shadow: none;
+    }
+  }
+
+  @keyframes subtleShake {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-1px); }
+  }
+
+  @keyframes pulseGlow {
+    0% { box-shadow: 0 0 10px rgba(255, 20, 147, 0.6); }
+    50% { box-shadow: 0 0 25px rgba(255, 20, 147, 1); }
+    100% { box-shadow: 0 0 10px rgba(255, 20, 147, 0.6); }
+  }
+
+  @keyframes fadeInPost {
+    to { opacity: 1; }
+  }
+
+  @keyframes electricHover {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.5) saturate(2); }
+  }
+</style>
+</head>
+<body>
+<div id="wrapper">
+
+<h1>مادهای جی تی ای من</h1>
+
+<div class="post">
+  <h2>مود GTA V HUD</h2>
+  <p>این مود رابط کاربری بازی GTA San Andreas را به شکل GTA V تبدیل می‌کند و ظاهر بازی را مدرن می‌کند.</p>
+  <a class="download-link" href="https://github.com/AmirDarkrich/drs-pack/raw/7602086e1d326e53d784c07d97f8fb714bfa2624/gta%20v%20hud.rar" target="_blank" rel="noopener noreferrer">دانلود مود</a>
+</div>
+
+<div class="post">
+  <h2>مود ModLoader</h2>
+  <p>افزونه‌ای قدرتمند برای اجرای تمام مودهای بازی GTA San Andreas به راحتی.</p>
+  <a class="download-link" href="https://github.com/AmirDarkrich/drs-pack/raw/refs/heads/main/modloader.rar" target="_blank" rel="noopener noreferrer">دانلود مود</a>
+</div>
+
+<button id="modeToggle">تغییر حالت روشن / تیره</button>
+
+<div id="textBox">
+  ستون‌های گنگ من! 🙌<br />
+  تمامی این فایل‌ها به‌زودی همراه با آموزش کامل نصب در قالب ویدیو روی وب‌سایت قرار می‌گیرن،<br />
+  و تست و بررسی دقیقشون هم توی کانال یوتیوب منتشر میشه.<br />
+  با عشق براتون ساختم — امیدوارم حسابی از تجربه‌ش لذت ببرید ❤️
+</div>
+
+<div class="final-message">
+  <img src="https://i.postimg.cc/Pp8sBg1m/Screenshot-Whats-App.jpg" alt="Screenshot WhatsApp" />
+</div>
+
+</div>
+
+<script>
+  document.getElementById('modeToggle').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+</body>
+</html>
